@@ -1,0 +1,12 @@
+[
+{"name":"flare.startup.eMotorWerks","size":1,"imports":["flare.charging.Effacement","flare.optim.MaxAutoConso"]},
+{"name":"flare.startup.Nuvve","size":2,"imports":["flare.charging.V2G"]},
+{"name":"flare.startup.TheMobilityHouse","size":3,"imports":["flare.charging.V2G","flare.charging.Effacement","flare.optim.MaxAutoConso"]},
+{"name":"flare.startup.EVConnect","size":4,"imports":["flare.charging.Effacement","flare.services.Comptage","flare.services.Facturation"]},
+{"name":"flare.startup.Greenlots","size":5,"imports":["flare.charging.Effacement","flare.optim.MaxAutoConso"]},
+{"name":"flare.charging.V2G","size":6,"imports":[]},
+{"name":"flare.charging.Effacement","size":7,"imports":[]},
+{"name":"flare.optim.MaxAutoConso","size":8,"imports":[]},
+{"name":"flare.services.Comptage","size":9,"imports":[]},
+{"name":"flare.services.Facturation","size":10,"imports":[]}
+]
