@@ -26,6 +26,6 @@
 {"name":"flare.optim.MaxAutoConso","size":8,"imports":[]},
 {"name":"flare.optim.OPTIMISATION","size":28,"imports":["flare.optim.MaxAutoConso"]},
 {"name":"flare.services.Comptage","size":9,"imports":[]},
-{"name":"flare.services.Facturation","size":10,"imports":[]}
-{"name":"flare.services.SERVICES","size":29,"imports":["flare.services.Comptage","flare.services.Facturation"]},
+{"name":"flare.services.Facturation","size":10,"imports":[]},
+{"name":"flare.services.SERVICES","size":29,"imports":["flare.services.Comptage","flare.services.Facturation"]}
 ]
