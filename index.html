@@ -1,9 +1,21 @@
 <!DOCTYPE html>
+<html>
 <meta charset="utf-8">
 <style>
 
+h1 {
+    display: block;
+    font: italic bold 12px/30px Helvetica, serif;
+    font-size: 2em;
+    margin-top: 2em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: normal;
+}
+
 .node {
-  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   fill: #bbb;
 }
 
@@ -47,13 +59,18 @@
 }
 
 </style>
+<head>
+  <title>Mobilité Electrique</title>
+</head>
 <body>
+  <h1 align=center>Panorama de la Mobilité Electrique</h1>
+  <div id="container" style="width:800px; margin:0 auto;"></div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
-var diameter = 960,
+var diameter = 900,
     radius = diameter / 2,
-    innerRadius = radius - 120;
+    innerRadius = radius - 300;
 
 var cluster = d3.cluster()
     .size([360, innerRadius]);
@@ -63,7 +80,7 @@ var line = d3.radialLine()
     .radius(function(d) { return d.y; })
     .angle(function(d) { return d.x / 180 * Math.PI; });
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#container").append("svg")
     .attr("width", diameter)
     .attr("height", diameter)
   .append("g")
@@ -72,7 +89,7 @@ var svg = d3.select("body").append("svg")
 var link = svg.append("g").selectAll(".link"),
     node = svg.append("g").selectAll(".node");
 
-d3.json("flare.json", function(error, classes) {
+d3.json("flare1.json", function(error, classes) {
   if (error) throw error;
 
   var root = packageHierarchy(classes)
@@ -169,3 +186,5 @@ function packageImports(nodes) {
 }
 
 </script>
+
+</html>
